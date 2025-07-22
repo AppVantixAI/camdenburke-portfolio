@@ -1,66 +1,58 @@
-# Camden Burke Portfolio
+# Camden Burke - Digital Business Card
 
-A modern, responsive digital business card website for Camden Burke, Founder & AI Integration Consultant at AppVantix LLC.
+A modern, responsive digital business card website with AI chat integration.
 
 ## Features
 
-- 🎨 Clean, minimalist design with a focus on user experience
-- 📱 Fully responsive - optimized for desktop and mobile devices
-- 🤖 Interactive AI Agent Orb with chat functionality (ready for API integration)
-- 📧 Easy-access contact dropdown with social links
-- ♿ Accessibility-first approach with ARIA labels and keyboard navigation
-- ⚡ Performance optimized with lazy loading
+- 🎨 Clean, minimalist design with teal color scheme
+- 📱 Fully responsive (desktop & mobile optimized)
+- 💬 ElevenLabs AI assistant integration
+- 🎯 Smooth animations and transitions
+- ♿ Accessible (keyboard navigation, ARIA labels)
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: CSS Modules with CSS Variables
-- **Deployment**: Netlify
-- **Domain**: camdenburke.co.uk
+- React 18 with TypeScript
+- Vite for fast development
+- Pure CSS with CSS variables
+- ElevenLabs Conversational AI widget
 
-## Getting Started
+## Setup
 
 1. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-2. Run the development server:
-```bash
-npm run dev
-```
+2. Create a `.env` file with your API keys:
+   ```
+   VITE_ELEVENLABS_API_KEY=your_key_here
+   VITE_ELEVENLABS_AGENT_ID=your_agent_id_here
+   VITE_OPENAI_API_KEY=your_openai_key_here
+   ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-## Environment Variables
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-Create a `.env.local` file in the root directory with the following variables:
+## API Integration
 
-```env
-# OpenAI API Key for chat functionality
-NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+The chat functionality requires a backend API endpoint at `/api/chat`. For production:
 
-# ElevenLabs API Key for text-to-speech
-NEXT_PUBLIC_ELEVENLABS_API_KEY=your_elevenlabs_api_key
-```
+1. Set up a serverless function (Netlify Functions, Vercel Functions, etc.)
+2. Handle OpenAI API calls server-side to protect API keys
+3. Return responses in format: `{ message: "response text" }`
 
 ## Deployment
 
-The site is configured for deployment on Netlify with automatic builds from the main branch.
+This site is configured for deployment on Netlify at `camdenburke.co.uk`.
 
-## Color Palette
+## License
 
-- Teal: `#02807D`
-- Dark Gray: `#353A3E`
-- Light Gray: `#E9EBED`
-
-## Contact
-
-- Email: contact@appvantix.com
-- Website: https://appvantix.com
-- LinkedIn: https://www.linkedin.com/in/camdenburkedev
-
----
-
-Built with 💚 by AppVantix LLC
+© 2024 Camden Burke / AppVantix LLC
